@@ -1,3 +1,5 @@
+package io.alchemystudio.docker.demo;
+
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.model.Container;
 import com.github.dockerjava.core.DefaultDockerClientConfig;
