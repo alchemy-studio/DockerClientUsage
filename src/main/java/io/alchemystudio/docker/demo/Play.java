@@ -16,7 +16,7 @@ public class Play {
         System.out.println();
         DockerClientConfig config = DefaultDockerClientConfig
                 .createDefaultConfigBuilder()
-                .withDockerHost("tcp://192.168.99.100:2376")
+                .withDockerHost(DockerMachineExecutor.getDockerHost())
                 .withDockerTlsVerify(true)
                 .withDockerCertPath(System.getProperty("user.home") + "/.docker/machine/machines/default")
                 .build();
