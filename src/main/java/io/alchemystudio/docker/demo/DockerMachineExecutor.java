@@ -1,5 +1,8 @@
 package io.alchemystudio.docker.demo;
 
+import com.github.dockerjava.core.DefaultDockerClientConfig;
+import com.github.dockerjava.core.DockerClientConfig;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -38,5 +41,19 @@ public class DockerMachineExecutor {
             }
         }
         return null;
+    }
+
+    public static String getCertPath() {
+        // todo: 做通用功能
+        return System.getProperty("user.home") + "/.docker/machine/machines/default";
+    }
+
+    public static DockerClientConfig createDefaultConfig() {
+        return DefaultDockerClientConfig
+                .createDefaultConfigBuilder()
+                .withDockerHost(DockerMachineExecutor.getDockerHost())
+                .withDockerTlsVerify(true)
+                .withDockerCertPath(DockerMachineExecutor.getCertPath())
+                .build();
     }
 }
