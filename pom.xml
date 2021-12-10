@@ -12,7 +12,7 @@
         <slf4j.ver>2.0.0-alpha1</slf4j.ver>
         <docker-java.ver>3.1.5</docker-java.ver>
         <activation.ver>1.1</activation.ver>
-        <log4j.ver>2.13.3</log4j.ver>
+        <log4j.ver>2.15.0</log4j.ver>
     </properties>
 
     <dependencies>
